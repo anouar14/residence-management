@@ -1,0 +1,126 @@
+<div class="container mt-4">
+    <h2>Ajouter un Appartement</h2>
+    <form *ngIf="apartForm" [formGroup]="apartForm" (ngSubmit)="onSubmit()">
+      <div class="mb-3">
+        <label for="apartmentNumber" class="form-label">Apartment Number:</label>
+        <input
+          id="apartmentNumber"
+          type="number"
+          class="form-control"
+          formControlName="apartmentNumber"
+          placeholder="Enter apartment number"
+        />
+        <div *ngIf="apartForm.get('apartmentNumber')?.invalid && apartForm.get('apartmentNumber')?.touched" class="text-danger">
+          Apartment number is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="floorNumber" class="form-label">Floor Number:</label>
+        <input
+          id="floorNumber"
+          type="number"
+          class="form-control"
+          formControlName="floorNumber"
+          placeholder="Enter floor number"
+        />
+        <div *ngIf="apartForm.get('floorNumber')?.invalid && apartForm.get('floorNumber')?.touched" class="text-danger">
+          Floor number is required.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="surface" class="form-label">Surface:</label>
+        <input
+          id="surface"
+          type="number"
+          class="form-control"
+          formControlName="surface"
+          placeholder="Enter surface in square meters"
+        />
+        <div *ngIf="apartForm.get('surface')?.invalid && apartForm.get('surface')?.touched" class="text-danger">
+          Surface is required and must be greater than 0.
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Terrace:</label>
+        <div>
+          <input
+            type="radio"
+            id="terraceYes"
+            formControlName="terrace"
+            value="true"
+          />
+          <label for="terraceYes">Yes</label>
+          <input
+            type="radio"
+            id="terraceNo"
+            formControlName="terrace"
+            value="false"
+          />
+          <label for="terraceNo">No</label>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="surfaceTerrace" class="form-label">Surface Terrace:</label>
+        <input
+          id="surfaceTerrace"
+          type="number"
+          class="form-control"
+          formControlName="surfaceTerrace"
+          placeholder="Enter terrace surface (if applicable)"
+        />
+      </div>
+  
+      <div class="mb-3">
+        <label class="form-label">Category:</label>
+        <div>
+          <input
+            type="radio"
+            id="categoryS1"
+            formControlName="category"
+            value="S+1"
+          />
+          <label for="categoryS1">S+1</label>
+          <input
+            type="radio"
+            id="categoryS2"
+            formControlName="category"
+            value="S+2"
+          />
+          <label for="categoryS2">S+2</label>
+          <input
+            type="radio"
+            id="categoryS3"
+            formControlName="category"
+            value="S+3"
+          />
+          <label for="categoryS3">S+3</label>
+        </div>
+      </div>
+  
+      <div class="mb-3">
+        <label for="residence" class="form-label">Residence:</label>
+        <input
+          id="residence"
+          type="number"
+          class="form-control"
+          formControlName="residence"
+          placeholder="Enter residence ID"
+        />
+        <div *ngIf="apartForm.get('residence')?.invalid && apartForm.get('residence')?.touched" class="text-danger">
+          Residence ID is required.
+        </div>
+      </div>
+  
+      <button type="submit" class="btn btn-primary" [disabled]="apartForm.invalid">
+        Add
+      </button>
+      <button type="button" class="btn btn-secondary" (click)="onReset()">
+        Reset
+      </button>
+    </form>
+  </div>
+  

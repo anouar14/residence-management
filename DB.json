@@ -1,0 +1,15 @@
+{
+    "residences": [
+      { "id": 1, "name": "El fel", "address": "Borj Cedria", "image": "../../assets/images/elfel.jpg", "status": "Disponible" },
+      { "id": 2, "name": "El yasmine", "address": "Ezzahra", "image": "../../assets/images/elyasmine.jpg", "status": "Disponible" },
+      { "id": 3, "name": "El Arij", "address": "Rades", "image": "../../assets/images/elarij.jpg", "status": "Vendu" },
+      { "id": 4, "name": "El Anber", "address": "inconnu", "image": "../../assets/images/elanber.jpg", "status": "En Construction" }
+    ],
+    "apartments": [
+      { "id": 1, "name": "Apartment A", "residenceId": 1, "area": "100m²", "price": 120000 },
+      { "id": 2, "name": "Apartment B", "residenceId": 1, "area": "80m²", "price": 90000 },
+      { "id": 3, "name": "Apartment C", "residenceId": 2, "area": "120m²", "price": 150000 },
+      { "id": 4, "name": "Apartment D", "residenceId": 3, "area": "95m²", "price": 110000 }
+    ]
+  }
+  

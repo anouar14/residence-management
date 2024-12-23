@@ -1,0 +1,111 @@
+/* Style général du formulaire */
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Espacement entre les éléments du formulaire */
+  form div {
+    margin-bottom: 15px;
+  }
+  
+  /* Style des labels */
+  label {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+    color: #333;
+  }
+  
+  /* Style des champs de saisie */
+  input, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+  
+  /* Champ de saisie avec bordure rouge en cas d'erreur */
+  input.ng-invalid, select.ng-invalid {
+    border-color: red;
+  }
+  
+  /* Message d'erreur */
+  div.ng-invalid.ng-touched {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+  }
+  
+  /* Style du bouton de soumission */
+  button[type="submit"], button[type="button"] {
+    padding: 10px 20px;
+    font-size: 14px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button[type="submit"]:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  
+  /* Style du bouton pour ajouter des appartements */
+  button[type="button"] {
+    background-color: #007BFF;
+  }
+  
+  button[type="button"]:hover, button[type="submit"]:hover {
+    opacity: 0.9;
+  }
+  
+  /* Alignement du champ pour ajouter des appartements */
+  button[type="button"] {
+    margin-bottom: 20px;
+    align-self: flex-start;
+  }
+  
+  /* Style des appartements ajoutés dynamiquement */
+  form div[formArrayName="apartments"] {
+    margin-top: 20px;
+  }
+  
+  form div[formArrayName="apartments"] div {
+    margin-bottom: 10px;
+  }
+  
+  form div[formArrayName="apartments"] label {
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+  
+  /* Champs de saisie pour les appartements */
+  form div[formArrayName="apartments"] input {
+    font-size: 13px;
+  }
+  
+  /* Espacement et style pour les éléments de la liste déroulante */
+  select {
+    font-size: 14px;
+    padding: 10px;
+  }
+  
+  /* Style pour la page contenant le formulaire */
+  body {
+    background-color: #e9ecef;
+    font-family: Arial, sans-serif;
+  }
+  
